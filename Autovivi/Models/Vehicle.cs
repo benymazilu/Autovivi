@@ -15,9 +15,9 @@ namespace Autovivi.Models
 
         public string Model { get; set; }
 
-        public int ProductionYear { get; set; }
+        public ProductionYear ProductionYear { get; set; }
 
-        public string FuelType { get; set; }
+        public FuelType FuelType { get; set; }
 
         public string VehicleType { get; set; }
 
@@ -44,8 +44,6 @@ namespace Autovivi.Models
         public string Options { get; set; }
 
         public string BodyStyle { get; set; }
-
-
-
+        
     }
 }

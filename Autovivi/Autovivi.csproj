@@ -209,14 +209,24 @@
     <Compile Include="Migrations\201610311053067_init.Designer.cs">
       <DependentUpon>201610311053067_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610311756038_init1.cs" />
+    <Compile Include="Migrations\201610311756038_init1.Designer.cs">
+      <DependentUpon>201610311756038_init1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311828370_georgel.cs" />
+    <Compile Include="Migrations\201610311828370_georgel.Designer.cs">
+      <DependentUpon>201610311828370_georgel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
     <Compile Include="Models\AutoviviDbContext.cs" />
+    <Compile Include="Models\FuelType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\ProductionYear.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -319,6 +329,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610311053067_init.resx">
       <DependentUpon>201610311053067_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311756038_init1.resx">
+      <DependentUpon>201610311756038_init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311828370_georgel.resx">
+      <DependentUpon>201610311828370_georgel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
