@@ -221,6 +221,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
     <Compile Include="Models\AutoviviDbContext.cs" />
+    <Compile Include="Models\BodyStyle.cs" />
     <Compile Include="Models\FuelType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

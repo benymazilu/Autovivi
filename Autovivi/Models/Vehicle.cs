@@ -43,7 +43,7 @@ namespace Autovivi.Models
 
         public string Options { get; set; }
 
-        public string BodyStyle { get; set; }
+        public enum BodyStyle { get; set; }
         
     }
 }
