@@ -11,7 +11,7 @@ namespace Autovivi.Models
         [Key]
         public int Id { get; set; }
 
-        public string Brand { get; set; }
+        public Brand Brand { get; set; }
 
         public string Model { get; set; }
 
@@ -19,7 +19,7 @@ namespace Autovivi.Models
 
         public string FuelType { get; set; }
 
-        public string VehicleType { get; set; }
+        public VehicleType VehicleType { get; set; }
 
         public decimal Price { get; set; }
 
