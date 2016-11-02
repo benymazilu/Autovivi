@@ -37,7 +37,7 @@ namespace Autovivi.Models
 
         public string Colour { get; set; }
 
-        public string GearBox { get; set; }
+        public Gearbox GearBox { get; set; }
 
         public int Power { get; set; }
 

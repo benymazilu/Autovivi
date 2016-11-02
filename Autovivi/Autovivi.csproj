@@ -221,12 +221,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
     <Compile Include="Models\AutoviviDbContext.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\Brand.cs" />
-=======
     <Compile Include="Models\BodyStyle.cs" />
     <Compile Include="Models\FuelType.cs" />
->>>>>>> 79691c93c2994a785a47a2cbed6322943095dd73
+    <Compile Include="Models\Gearbox.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
