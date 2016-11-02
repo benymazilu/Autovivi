@@ -209,6 +209,11 @@
     <Compile Include="Migrations\201610311053067_init.Designer.cs">
       <DependentUpon>201610311053067_init.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Migrations\201610311825111_de la beni.cs" />
+    <Compile Include="Migrations\201610311825111_de la beni.Designer.cs">
+      <DependentUpon>201610311825111_de la beni.cs</DependentUpon>
+=======
     <Compile Include="Migrations\201610311756038_init1.cs" />
     <Compile Include="Migrations\201610311756038_init1.Designer.cs">
       <DependentUpon>201610311756038_init1.cs</DependentUpon>
@@ -216,6 +221,7 @@
     <Compile Include="Migrations\201610311828370_georgel.cs" />
     <Compile Include="Migrations\201610311828370_georgel.Designer.cs">
       <DependentUpon>201610311828370_georgel.cs</DependentUpon>
+>>>>>>> 176bcd8c52c42d590296683c5e6c2d2bcc8b4200
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -333,11 +339,16 @@
     <EmbeddedResource Include="Migrations\201610311053067_init.resx">
       <DependentUpon>201610311053067_init.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Migrations\201610311825111_de la beni.resx">
+      <DependentUpon>201610311825111_de la beni.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Migrations\201610311756038_init1.resx">
       <DependentUpon>201610311756038_init1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610311828370_georgel.resx">
       <DependentUpon>201610311828370_georgel.cs</DependentUpon>
+>>>>>>> 176bcd8c52c42d590296683c5e6c2d2bcc8b4200
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
