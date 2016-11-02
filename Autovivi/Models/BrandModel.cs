@@ -6,17 +6,13 @@ using System.Web;
 
 namespace Autovivi.Models
 {
-    public class Add
+    public class BrandModel
     {
         [Key]
         public int Id { get; set; }
 
-        public virtual User User { get; set; }
-
         public virtual Vehicle Vehicle { get; set; }
 
-        public virtual List<Message> Messages { get; set; }
-
-        public DateTime PostDate { get; set; }
+        public string CarModel { get; set; }
     }
 }

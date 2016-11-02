@@ -45,5 +45,6 @@ namespace Autovivi.Models
 
         public BodyStyle BodyStyle { get; set; }
         
+        public virtual List<BrandModel> Models { get; set; }
     }
 }
