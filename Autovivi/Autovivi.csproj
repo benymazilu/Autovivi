@@ -217,6 +217,10 @@
     <Compile Include="Migrations\201610311828370_georgel.Designer.cs">
       <DependentUpon>201610311828370_georgel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611021822358_brandModel.cs" />
+    <Compile Include="Migrations\201611021822358_brandModel.Designer.cs">
+      <DependentUpon>201611021822358_brandModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
@@ -225,9 +229,7 @@
     <Compile Include="Models\BodyStyle.cs" />
     <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\FuelType.cs" />
-
     <Compile Include="Models\Gearbox.cs" />
-
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
@@ -342,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610311828370_georgel.resx">
       <DependentUpon>201610311828370_georgel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611021822358_brandModel.resx">
+      <DependentUpon>201611021822358_brandModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
