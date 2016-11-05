@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace Autovivi.Models
     public enum Brand
     {
         Audi,
+        [Display(Name = "Alfa Romeo")]
         AlfaRomeo,
         Acura,
         Bentley,
@@ -31,6 +33,7 @@ namespace Autovivi.Models
         Maybach,
         Mazda,
         McLaren,
+        [Display(Name = "Mercedes Benz")]
         MercedesBenz,
         Mini,
         Nissan,
@@ -39,6 +42,7 @@ namespace Autovivi.Models
         Pontiac,
         Porsche,
         Renault,
+        [Display(Name = "Rolls Royce")]
         RollsRoyce,
         Skoda,
         Subaru,
