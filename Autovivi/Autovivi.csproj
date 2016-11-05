@@ -275,6 +275,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Options.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\ProductionYear.cs" />
     <Compile Include="Models\User.cs" />
