@@ -11,15 +11,15 @@ namespace Autovivi.Models
         [Key]
         public int Id { get; set; }
 
-        public Brand Brand { get; set; }
+        public Brand? Brand { get; set; }
 
         public string Model { get; set; }
 
-        public ProductionYear ProductionYear { get; set; }
+        public ProductionYear? ProductionYear { get; set; }
 
-        public FuelType FuelType { get; set; }
+        public FuelType? FuelType { get; set; }
 
-        public VehicleType VehicleType { get; set; }
+        public VehicleType? VehicleType { get; set; }
 
         public decimal Price { get; set; }
 
@@ -37,13 +37,13 @@ namespace Autovivi.Models
 
         public string Colour { get; set; }
 
-        public Gearbox GearBox { get; set; }
+        public Gearbox? GearBox { get; set; }
 
         public int Power { get; set; }
 
         public string Options { get; set; }
 
-        public BodyStyle BodyStyle { get; set; }
+        public BodyStyle? BodyStyle { get; set; }
         
         public virtual List<BrandModel> Models { get; set; }
     }
