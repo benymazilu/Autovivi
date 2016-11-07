@@ -1,12 +1,4 @@
 ﻿@model Autovivi.Models.Vehicle
-@using Autovivi.Models
-
-@{
-    ViewBag.Title = "Create";
-}
-
-<h2>Create</h2>
-
 
 @using (Html.BeginForm())
 {
@@ -35,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProductionYear, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.ProductionYear,"Select Production Year", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.ProductionYear, "Select Production Year", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ProductionYear, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -43,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FuelType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.FuelType,"Select Fuel Type", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.FuelType, "Select Fuel Type", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FuelType, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -51,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.VehicleType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.VehicleType,"Select Vehicle Type", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.VehicleType, "Select Vehicle Type", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.VehicleType, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -123,7 +115,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.GearBox, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.GearBox,"Select Gearbox", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.GearBox, "Select Gearbox", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.GearBox, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -140,23 +132,23 @@
             @Html.LabelFor(model => model.Options, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @*@for (int i = 0; i < Model.Options.Count; i++)
-                {
-                    <label>
-                       
-                        @Html.CheckBoxFor(m => Model.Days[0].Selected)
-                        @Html.HiddenFor(m => Model.Days[0].Value)
-                    </label>
-                    <label>
-                        @T("Vodka")
-                        @Html.CheckBoxFor(m => Model.Days[1].Selected)
-                        @Html.HiddenFor(m => Model.Days[1].Value)
-                    </label>
-                    <label>
-                        @T("Rum")
-                        @Html.CheckBoxFor(m => Model.Days[2].Selected)
-                        @Html.HiddenFor(m => Model.Days[2].Value)
-                    </label>
-                }*@
+                    {
+                        <label>
+
+                            @Html.CheckBoxFor(m => Model.Days[0].Selected)
+                            @Html.HiddenFor(m => Model.Days[0].Value)
+                        </label>
+                        <label>
+                            @T("Vodka")
+                            @Html.CheckBoxFor(m => Model.Days[1].Selected)
+                            @Html.HiddenFor(m => Model.Days[1].Value)
+                        </label>
+                        <label>
+                            @T("Rum")
+                            @Html.CheckBoxFor(m => Model.Days[2].Selected)
+                            @Html.HiddenFor(m => Model.Days[2].Value)
+                        </label>
+                    }*@
                 @Html.ValidationMessageFor(model => model.Options, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -164,23 +156,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BodyStyle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.BodyStyle,"Select Body Style", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.BodyStyle, "Select Body Style", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BodyStyle, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+ 
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }

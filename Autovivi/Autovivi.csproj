@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201611051746565_nullable.Designer.cs">
       <DependentUpon>201611051746565_nullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611071211044_vehicle.cs" />
+    <Compile Include="Migrations\201611071211044_vehicle.Designer.cs">
+      <DependentUpon>201611071211044_vehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
@@ -366,6 +370,8 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Add\_PartialVehicle.cshtml" />
+    <Content Include="Views\Add\_PartialUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611051746565_nullable.resx">
       <DependentUpon>201611051746565_nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611071211044_vehicle.resx">
+      <DependentUpon>201611071211044_vehicle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
