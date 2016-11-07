@@ -41,7 +41,7 @@ namespace Autovivi.Models
 
         public int Power { get; set; }
 
-        public string Options { get; set; }
+        public Options Options { get; set; }
 
         public BodyStyle? BodyStyle { get; set; }
         
