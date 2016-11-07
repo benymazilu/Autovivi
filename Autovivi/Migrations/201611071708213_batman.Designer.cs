@@ -7,13 +7,13 @@ namespace Autovivi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class vehicle : IMigrationMetadata
+    public sealed partial class batman : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(vehicle));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(batman));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611071211044_vehicle"; }
+            get { return "201611071708213_batman"; }
         }
         
         string IMigrationMetadata.Source
