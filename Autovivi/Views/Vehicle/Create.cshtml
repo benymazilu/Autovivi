@@ -7,7 +7,25 @@
 
 <h2>Create</h2>
 
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(function ()
+    {
+        $('#Brand').change(function ()
+        {
+            $.getJSON('/Vehicle/ModelList/' + $('#Brand option:selected').text(), function (data)
+            {
+                var items = '<option>Da-i cu modelu</option>';
+                $.each(data, function (i, model)
+                {
+                    items += "<option value='" + model.Value + "'>" + model.Text + "</option>";
+                });
+                $('#Model').html(items);
+            });
+        });
+    })();
 
+</script>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -27,8 +45,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Model, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Model, Enumerable.Empty<SelectListItem>(), htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+
+
+
             </div>
         </div>
 
@@ -142,7 +163,7 @@
                 @*@for (int i = 0; i < Model.Options.Count; i++)
                 {
                     <label>
-                       
+
                         @Html.CheckBoxFor(m => Model.Days[0].Selected)
                         @Html.HiddenFor(m => Model.Days[0].Value)
                     </label>

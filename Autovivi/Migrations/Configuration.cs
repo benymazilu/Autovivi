@@ -9,7 +9,7 @@ namespace Autovivi.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Autovivi.Models.AutoviviDbContext context)

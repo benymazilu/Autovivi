@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Autovivi.Models.BrandModelEnums;
 using Autovivi.Models;
 
 namespace Autovivi.Controllers
@@ -39,6 +40,25 @@ namespace Autovivi.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        public JsonResult ModelList([Bind(Prefix = "id")] string brand)
+        {
+            Type brandEnumType = typeof(Dacia);
+            switch (brand)
+            {
+                case "Acura":
+                    brandEnumType = typeof(Acura);
+                    break;
+            }
+
+            var options = Enum.GetNames(brandEnumType).Select(m =>
+            {
+                var probableValue = Enum.Parse(brandEnumType, m);
+                return new SelectListItem() { Text = m.Replace("_", ""), Value = ((int)probableValue).ToString() };
+            });
+
+            return Json(options, JsonRequestBehavior.AllowGet);
         }
 
         // POST: Vehicle/Create

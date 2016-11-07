@@ -205,29 +205,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610311053067_init.cs" />
-    <Compile Include="Migrations\201610311053067_init.Designer.cs">
-      <DependentUpon>201610311053067_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610311756038_init1.cs" />
-    <Compile Include="Migrations\201610311756038_init1.Designer.cs">
-      <DependentUpon>201610311756038_init1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610311828370_georgel.cs" />
-    <Compile Include="Migrations\201610311828370_georgel.Designer.cs">
-      <DependentUpon>201610311828370_georgel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611021822358_brandModel.cs" />
-    <Compile Include="Migrations\201611021822358_brandModel.Designer.cs">
-      <DependentUpon>201611021822358_brandModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611051746565_nullable.cs" />
-    <Compile Include="Migrations\201611051746565_nullable.Designer.cs">
-      <DependentUpon>201611051746565_nullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611071211044_vehicle.cs" />
-    <Compile Include="Migrations\201611071211044_vehicle.Designer.cs">
-      <DependentUpon>201611071211044_vehicle.cs</DependentUpon>
+    <Compile Include="Migrations\201611071708213_batman.cs" />
+    <Compile Include="Migrations\201611071708213_batman.Designer.cs">
+      <DependentUpon>201611071708213_batman.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -385,23 +365,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610311053067_init.resx">
-      <DependentUpon>201610311053067_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610311756038_init1.resx">
-      <DependentUpon>201610311756038_init1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610311828370_georgel.resx">
-      <DependentUpon>201610311828370_georgel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611021822358_brandModel.resx">
-      <DependentUpon>201611021822358_brandModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611051746565_nullable.resx">
-      <DependentUpon>201611051746565_nullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611071211044_vehicle.resx">
-      <DependentUpon>201611071211044_vehicle.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611071708213_batman.resx">
+      <DependentUpon>201611071708213_batman.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
