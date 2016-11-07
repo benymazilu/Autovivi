@@ -372,6 +372,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Add\_PartialVehicle.cshtml" />
     <Content Include="Views\Add\_PartialUser.cshtml" />
+    <Content Include="Views\Home\_Vehicle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
