@@ -7,7 +7,7 @@ namespace Autovivi.Models.BrandModelEnums
 {
     public enum Pontiac
     {
-        Bonnevielle,
+        Bonneville,
         Montana,
         Siera
     }

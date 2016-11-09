@@ -8,10 +8,8 @@ namespace Autovivi.Models.BrandModelEnums
     public enum Dacia
     {
         Duster,
-        DaciaLuBatranu,
         Logan,
         Lodgy,
-        Sandero,
-        RablaTicket
+        Sandero
     }
 }

@@ -27,7 +27,7 @@ namespace Autovivi.Models
 
         public int CubicCapacity { get; set; }
 
-        public string Condition { get; set; }
+        public Condition? Condition { get; set; }
 
         public string Damage { get; set; }
 

@@ -50,6 +50,154 @@ namespace Autovivi.Controllers
                 case "Acura":
                     brandEnumType = typeof(Acura);
                     break;
+
+                case "Audi":
+                    brandEnumType = typeof(Audi);
+                    break;
+
+                case "Alfa Romeo":
+                    brandEnumType = typeof(AlfaRomeo);
+                    break;
+
+                case "Bentley":
+                    brandEnumType = typeof(Bentley);
+                    break;
+
+                case "BMW":
+                    brandEnumType = typeof(BMW);
+                    break;
+
+                case "Cadillac":
+                    brandEnumType = typeof(Cadillac);
+                    break;
+
+                case "Chevrolet":
+                    brandEnumType = typeof(Chevrolet);
+                    break;
+
+                case "Citroen":
+                    brandEnumType = typeof(Citroen);
+                    break;
+
+                case "Dacia":
+                    brandEnumType = typeof(Dacia);
+                    break;
+
+                case "Daewoo":
+                    brandEnumType = typeof(Daewoo);
+                    break;
+
+                case "Dodge":
+                    brandEnumType = typeof(Dodge);
+                    break;
+
+                case "Ferrari":
+                    brandEnumType = typeof(Ferrari);
+                    break;
+
+                case "Fiat":
+                    brandEnumType = typeof(Fiat);
+                    break;
+
+                case "Ford":
+                    brandEnumType = typeof(Ford);
+                    break;
+
+                case "Honda":
+                    brandEnumType = typeof(Honda);
+                    break;
+
+                case "Hummer":
+                    brandEnumType = typeof(Hummer);
+                    break;
+
+                case "Hyundai":
+                    brandEnumType = typeof(Hyundai);
+                    break;
+
+                case "Infiniti":
+                    brandEnumType = typeof(Infiniti);
+                    break;
+
+                case "Iveco":
+                    brandEnumType = typeof(Iveco);
+                    break;
+
+                case "Jaguar":
+                    brandEnumType = typeof(Jaguar);
+                    break;
+
+                case "Jeep":
+                    brandEnumType = typeof(Jeep);
+                    break;
+
+                case "Maybach":
+                    brandEnumType = typeof(Maybach);
+                    break;
+
+                case "Mazda":
+                    brandEnumType = typeof(Mazda);
+                    break;
+
+                case "McLaren":
+                    brandEnumType = typeof(McLaren);
+                    break;
+
+                case "Mercedes Benz":
+                    brandEnumType = typeof(MercedesBez);
+                    break;
+
+                case "Mini":
+                    brandEnumType = typeof(Mini);
+                    break;
+
+                case "Nissan":
+                    brandEnumType = typeof(Nissan);
+                    break;
+
+                case "Opel":
+                    brandEnumType = typeof(Opel);
+                    break;
+
+                case "Peugeot":
+                    brandEnumType = typeof(Peugeot);
+                    break;
+
+                case "Pontiac":
+                    brandEnumType = typeof(Pontiac);
+                    break;
+
+                case "Porsche":
+                    brandEnumType = typeof(Porsche);
+                    break;
+
+                case "Renault":
+                    brandEnumType = typeof(Renault);
+                    break;
+
+                case "Rolls Royce":
+                    brandEnumType = typeof(RollsRoyce);
+                    break;
+
+                case "Skoda":
+                    brandEnumType = typeof(Skoda);
+                    break;
+
+                case "Subaru":
+                    brandEnumType = typeof(Subaru);
+                    break;
+
+                case "Tesla":
+                    brandEnumType = typeof(Tesla);
+                    break;
+
+                case "Toyota":
+                    brandEnumType = typeof(Toyota);
+                    break;
+
+                case "Volvo":
+                    brandEnumType = typeof(Volvo);
+                    break;
             }
 
             var options = Enum.GetNames(brandEnumType).Select(m =>
@@ -133,6 +281,11 @@ namespace Autovivi.Controllers
             db.Vehicles.Remove(vehicle);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult DetailedSearch()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)

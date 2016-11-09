@@ -1,4 +1,25 @@
 ﻿@model Autovivi.Models.Vehicle
+@using Autovivi.Models
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(function ()
+    {
+        $('#Brand').change(function ()
+        {
+            $.getJSON('/Vehicle/ModelList/' + $('#Brand option:selected').text(), function (data)
+            {
+                var items = '<option>Select Model</option>';
+                $.each(data, function (i, model)
+                {
+                    items += "<option value='" + model.Value + "'>" + model.Text + "</option>";
+                });
+                $('#Model').html(items);
+            });
+        });
+    })();
+
+</script>
 
 @using (Html.BeginForm())
 {
@@ -19,7 +40,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Model, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Model, Enumerable.Empty<SelectListItem>(), new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -75,7 +96,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Condition, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Condition, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EnumDropDownListFor(model => model.Condition,"Select Condition", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Condition, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -91,7 +112,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextArea("Description",null , new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -131,24 +152,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Options, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@for (int i = 0; i < Model.Options.Count; i++)
-                    {
+                @{var optionList = Enum.GetValues(typeof(Options));}
+                @foreach (object checkbox in optionList)
+                {
+                    <div id="ck-button">
                         <label>
+                             @Html.CheckBox("checkbox", checkbox.ToString()) @checkbox.ToString()
+                        </label>
+                    </div> 
+                }
 
-                            @Html.CheckBoxFor(m => Model.Days[0].Selected)
-                            @Html.HiddenFor(m => Model.Days[0].Value)
-                        </label>
-                        <label>
-                            @T("Vodka")
-                            @Html.CheckBoxFor(m => Model.Days[1].Selected)
-                            @Html.HiddenFor(m => Model.Days[1].Value)
-                        </label>
-                        <label>
-                            @T("Rum")
-                            @Html.CheckBoxFor(m => Model.Days[2].Selected)
-                            @Html.HiddenFor(m => Model.Days[2].Value)
-                        </label>
-                    }*@
                 @Html.ValidationMessageFor(model => model.Options, "", new { @class = "text-danger" })
             </div>
         </div>

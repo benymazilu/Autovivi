@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201611071708213_batman.Designer.cs">
       <DependentUpon>201611071708213_batman.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611090856365_models.cs" />
+    <Compile Include="Migrations\201611090856365_models.Designer.cs">
+      <DependentUpon>201611090856365_models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Add.cs" />
@@ -254,6 +258,7 @@
     <Compile Include="Models\BrandModelEnums\Acura.cs" />
     <Compile Include="Models\BrandModelEnums\AlfaRomeo.cs" />
     <Compile Include="Models\BrandModelEnums\Audi.cs" />
+    <Compile Include="Models\Condition.cs" />
     <Compile Include="Models\FuelType.cs" />
     <Compile Include="Models\Gearbox.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -353,6 +358,7 @@
     <Content Include="Views\Add\_PartialVehicle.cshtml" />
     <Content Include="Views\Add\_PartialUser.cshtml" />
     <Content Include="Views\Home\_Vehicle.cshtml" />
+    <Content Include="Views\Vehicle\DetailedSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,6 +374,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611071708213_batman.resx">
       <DependentUpon>201611071708213_batman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611090856365_models.resx">
+      <DependentUpon>201611090856365_models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

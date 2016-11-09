@@ -1,4 +1,26 @@
 ﻿@model Autovivi.Models.Vehicle
+    @using Autovivi.Models
+
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(function ()
+    {
+        $('#Brand').change(function ()
+        {
+            $.getJSON('/Vehicle/ModelList/' + $('#Brand option:selected').text(), function (data)
+            {
+                var items = '<option>Select Model</option>';
+                $.each(data, function (i, model)
+                {
+                    items += "<option value='" + model.Value + "'>" + model.Text + "</option>";
+                });
+                $('#Model').html(items);
+            });
+        });
+    })();
+
+</script>
 
 @using (Html.BeginForm())
 {
@@ -19,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Model, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Model, Enumerable.Empty<SelectListItem>(), new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -35,7 +57,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FuelType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.FuelType, "Select Fuel Type", new { @class = "form-control" })
+                @{var fuelList = Enum.GetValues(typeof(FuelType));}
+                @foreach (object radiotext in fuelList)
+                {
+                    @Html.RadioButton("radioname", radiotext.ToString())@radiotext.ToString() <span>  </span>
+                }
                 @Html.ValidationMessageFor(model => model.FuelType, "", new { @class = "text-danger" })
             </div>
         </div>

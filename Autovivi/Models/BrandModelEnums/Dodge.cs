@@ -9,8 +9,7 @@ namespace Autovivi.Models.BrandModelEnums
     {   
         Avenger,
         Caliber,
-        Chalanger,
+        Challanger,
         Charger
-            
     }
 }

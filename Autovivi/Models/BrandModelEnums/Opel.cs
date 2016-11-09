@@ -8,9 +8,7 @@ namespace Autovivi.Models.BrandModelEnums
     public enum Opel
     {
         Astra,
-        AstraGTC,
         Insignia,
-        InsigniaOPC,
         Monza
     }
 }

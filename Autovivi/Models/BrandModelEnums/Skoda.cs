@@ -7,6 +7,7 @@ namespace Autovivi.Models.BrandModelEnums
 {
     public enum Skoda
     {
-        OctaviaRS
+        Octavia,
+        Fabia
     }
 }
