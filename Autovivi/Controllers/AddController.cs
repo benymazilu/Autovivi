@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Autovivi.Models;
+using System.IO;
 
 namespace Autovivi.Controllers
 {
@@ -35,6 +36,7 @@ namespace Autovivi.Controllers
             return View(add);
         }
 
+        [Authorize]
         // GET: Add/Create
         public ActionResult Create()
         {
@@ -122,6 +124,20 @@ namespace Autovivi.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase photo)
+        {
+            string directory = @"E:\Temp\";
+
+            if (photo != null && photo.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(photo.FileName);
+                photo.SaveAs(Path.Combine(directory, fileName));
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

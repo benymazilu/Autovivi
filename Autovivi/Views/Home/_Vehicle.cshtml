@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProductionYear, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ProductionYear,"Production Year", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.ProductionYear, "Select Production Year", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ProductionYear, "", new { @class = "text-danger" })
@@ -55,7 +55,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FuelType, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FuelType,"Fuel Type", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @{var fuelList = Enum.GetValues(typeof(FuelType));}
                 @foreach (object radiotext in fuelList)

@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProductionYear, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ProductionYear,"Production Year", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.ProductionYear, "Select Production Year", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ProductionYear, "", new { @class = "text-danger" })
@@ -54,7 +54,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FuelType, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FuelType,"Fuel Type", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.FuelType, "Select Fuel Type", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FuelType, "", new { @class = "text-danger" })
@@ -62,10 +62,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.VehicleType, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.VehicleType,"Vehicle Type", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.VehicleType, "Select Vehicle Type", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.VehicleType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BodyStyle, "Body Style", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.BodyStyle, "Select Body Style", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BodyStyle, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -86,7 +94,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CubicCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CubicCapacity,"Cubic Capacity", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CubicCapacity, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CubicCapacity, "", new { @class = "text-danger" })
@@ -118,7 +126,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CountryOrigin, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CountryOrigin,"Country", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CountryOrigin, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CountryOrigin, "", new { @class = "text-danger" })
@@ -134,7 +142,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GearBox, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.GearBox,"Gearbox", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.GearBox, "Select Gearbox", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.GearBox, "", new { @class = "text-danger" })
@@ -164,16 +172,6 @@
 
                 @Html.ValidationMessageFor(model => model.Options, "", new { @class = "text-danger" })
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.BodyStyle, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.BodyStyle, "Select Body Style", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.BodyStyle, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
- 
+        </div> 
     </div>
 }

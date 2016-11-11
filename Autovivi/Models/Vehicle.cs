@@ -21,10 +21,14 @@ namespace Autovivi.Models
 
         public VehicleType? VehicleType { get; set; }
 
+        [DataType(DataType.Currency)]
+        [Range(typeof(decimal), "0", "1000000")]
         public decimal Price { get; set; }
 
+        [Range(typeof(int), "0", "1000000")]
         public int Mileage { get; set; }
 
+        [Range(typeof(int), "0", "1000000")]
         public int CubicCapacity { get; set; }
 
         public Condition? Condition { get; set; }
@@ -39,6 +43,7 @@ namespace Autovivi.Models
 
         public Gearbox? GearBox { get; set; }
 
+        [Range(typeof(int),"0","1000000")]
         public int Power { get; set; }
 
         public Options Options { get; set; }

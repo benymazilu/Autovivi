@@ -19,6 +19,5 @@ namespace Autovivi.Models
         public string PhoneNumber { get; set; }
 
         public string City { get; set; }
-
     }
 }

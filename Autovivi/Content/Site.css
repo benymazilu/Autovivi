@@ -1,9 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url(../Images/background.png);
-    background-color:aquamarine;
-    background-size:cover;
+    background-color: #5D5D81;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -37,12 +35,13 @@ textarea {
 }
 
 #ck-button:hover {
-    background:#639FAB;
+    background:#5D5D81;
+    border-color:white;
+    color:white;
 }
 
 #ck-button:active {
    fill:#F4D35E;
-   background-color:yellow;
 }
 
 .navbar {
@@ -53,35 +52,56 @@ textarea {
 .detailed-btn
 {
     margin:4px;
-    background-color:#81171B;
+ 
     padding:0 5px 0 5px;
     border-radius:4px;
     border:1px solid #710000;
     overflow:auto;
     float:left;
-    color: #BFD7EA;
+  
 }
 
 .index-box {
-    background-color: #FFF5B2;
-    border:1px solid #81171B;
-    margin:50px 450px 50px 0px;
+    background-color: #F0F2EF;
+    margin:50px 500px 50px 0px;
     padding: 20px 20px 50px 20px;
-    border-radius : 25px;
+    border-radius: 0 0 10px 0;
 }
 
 .index-search-btn {
     float:right;
-    font-size: 22px;
-    background-color: #FF6700;
+    font-size: 20px;
+    background-color: #81171B;
     border:1px solid #81171B;
-    border-radius:20px;
+    border-radius:4px;
     padding:5px;
+    color:white;
+    margin : 0 -8px 0 0;
 }
 
-.text-logo{
+.car-logo{
     width:120px;
-    height:50px;
-    position:center;
-    margin-right:10px;
+    height:40px;
+    margin:10px 20px 10px 0;
+    border-radius:10px
+}
+
+.car-logo:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
+.nav {
+    padding:5px;
+    background-color:#81171B;
+}
+
+.nav:hover {
+     font-size: larger;
+     background-color: #5D5D81;
+ }
+
+.footer-text {
+    color: white;
+    font-size:15px;
 }

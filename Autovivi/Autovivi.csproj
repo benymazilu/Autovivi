@@ -205,13 +205,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611071708213_batman.cs" />
-    <Compile Include="Migrations\201611071708213_batman.Designer.cs">
-      <DependentUpon>201611071708213_batman.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611090856365_models.cs" />
-    <Compile Include="Migrations\201611090856365_models.Designer.cs">
-      <DependentUpon>201611090856365_models.cs</DependentUpon>
+    <Compile Include="Migrations\201611101932396_init.cs" />
+    <Compile Include="Migrations\201611101932396_init.Designer.cs">
+      <DependentUpon>201611101932396_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -359,6 +355,7 @@
     <Content Include="Views\Add\_PartialUser.cshtml" />
     <Content Include="Views\Home\_Vehicle.cshtml" />
     <Content Include="Views\Vehicle\DetailedSearch.cshtml" />
+    <Content Include="Views\Add\_Upload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -372,11 +369,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611071708213_batman.resx">
-      <DependentUpon>201611071708213_batman.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611090856365_models.resx">
-      <DependentUpon>201611090856365_models.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611101932396_init.resx">
+      <DependentUpon>201611101932396_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -11,5 +12,6 @@ namespace Autovivi.Models
         public virtual List<Add> Adds { get; set; }
 
         public virtual List<Message> Messages{ get; set; }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Autovivi.Models
 {
-    public class Add
+    public class Add 
     {
         [Key]
         public int Id { get; set; }
