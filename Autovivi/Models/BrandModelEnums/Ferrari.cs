@@ -9,10 +9,8 @@ namespace Autovivi.Models.BrandModelEnums
     public enum Ferrari
     {   
         Berlinetta,
-        [Display(Name ="458 Italia")]
-        _458,
+        _458_Italia,
         F12,
-        [Display(Name ="La Ferrari")]
         LaFerrari,
         Testarossa
         

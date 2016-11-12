@@ -10,7 +10,7 @@ namespace Autovivi.Models.BrandModelEnums
     {   
         Continental,
         [Display(Name = "Continental Flying Spur")]
-        ContientalFlyingSpur,
+        Contiental_FlyingSpur,
         GTC,
         Mulsanne
     }

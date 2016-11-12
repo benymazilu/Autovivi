@@ -9,7 +9,7 @@ namespace Autovivi.Models.BrandModelEnums
     public enum Jaguar
     {
         [Display(Name = "F Type")]
-        FType,
+        F_Type,
         XF,
         XJ
 

@@ -9,19 +9,19 @@ namespace Autovivi.Models.BrandModelEnums
     public enum BMW
     {
         [Display(Name = "1 Series")]
-        Seria1,
+        _1_Series,
         [Display(Name = "2 Series")]
-        Seria2,
+        _2_Series,
         [Display(Name = "3 Series")]
-        Seria3,
+        _3_Series,
         [Display(Name = "4 Series")]
-        Seria4,
+        _4_Series,
         [Display(Name = "5 Series")]
-        Seria5,
+        _5_Series,
         [Display(Name = "6 Series")]
-        Seria6,
+        _6_Series,
         [Display(Name = "7 Series")]
-        Seria7,
+        _7_Series,
         X1,
         X3,
         X4,

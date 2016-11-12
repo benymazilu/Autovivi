@@ -144,7 +144,7 @@ namespace Autovivi.Controllers
                     break;
 
                 case "Mercedes Benz":
-                    brandEnumType = typeof(MercedesBez);
+                    brandEnumType = typeof(MercedesBenz);
                     break;
 
                 case "Mini":
@@ -203,7 +203,7 @@ namespace Autovivi.Controllers
             var options = Enum.GetNames(brandEnumType).Select(m =>
             {
                 var probableValue = Enum.Parse(brandEnumType, m);
-                return new SelectListItem() { Text = m.Replace("_", ""), Value = ((int)probableValue).ToString() };
+                return new SelectListItem() { Text = m.Replace("_"," "), Value = ((int)probableValue).ToString() };
             });
 
             return Json(options, JsonRequestBehavior.AllowGet);

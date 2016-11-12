@@ -11,7 +11,7 @@ namespace Autovivi.Models.BrandModelEnums
         Accord,
         Civic,
         [Display(Name = "Civic Type R")]
-        CivicTypeR,
+        Civic_Type_R,
         CB125,
         CBR,
         CB400,

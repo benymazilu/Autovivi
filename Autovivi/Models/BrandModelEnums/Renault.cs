@@ -7,7 +7,7 @@ namespace Autovivi.Models.BrandModelEnums
 {
     public enum Renault
     {
-        Clio,
-        Megane
+        Clio_RS,
+        Megane_RS
     }
 }

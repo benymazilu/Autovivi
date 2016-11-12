@@ -11,6 +11,6 @@ namespace Autovivi.Models.BrandModelEnums
         GT86,
         Supra,
         [Display(Name = "Land Cruiser")]
-        LandCruiser
+        Land_Cruiser
     }
 }

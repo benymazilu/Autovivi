@@ -9,10 +9,10 @@ namespace Autovivi.Models.BrandModelEnums
     public enum Mini
     {
         [Display(Name = "Cooper S")]
-        CooperS,
+        Cooper_S,
         Clubman,
         [Display(Name = "John Cooper Works")]
-        JohnCooperWorks
+        John_Cooper_Works
         
     }
 }

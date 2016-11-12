@@ -11,6 +11,6 @@ namespace Autovivi.Models.BrandModelEnums
         Eurostar,
         Stralis,
         [Display(Name = "Stralis Mega")]
-        StralisMega
+        Stralis_Mega
     }
 }

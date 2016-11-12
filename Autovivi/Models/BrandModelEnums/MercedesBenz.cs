@@ -6,15 +6,15 @@ using System.Web;
 
 namespace Autovivi.Models.BrandModelEnums
 {
-    public enum MercedesBez
+    public enum MercedesBenz
     {
         [Display(Name = "A45 AMG")]
-        A45AMG,
+        A_45_AMG,
         [Display(Name = "C65 AMG")]
-        C65AMG,
+        C_65_AMG,
         [Display(Name = "E65 AMG")]
-        E65AMG,
+        E_65_AMG,
         [Display(Name = "S65 AMG")]
-        S65AMG
+        S_65_AMG
     }
 }

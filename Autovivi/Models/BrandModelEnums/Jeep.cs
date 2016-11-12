@@ -10,7 +10,7 @@ namespace Autovivi.Models.BrandModelEnums
     {
         Cherokee,
         [Display(Name = "Grand Cherokee")]
-        GrandCherokee,
+        Grand_Cherokee,
         Renegade,
         Wrangler
     }
