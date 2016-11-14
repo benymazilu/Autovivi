@@ -52,6 +52,7 @@ namespace Autovivi.Controllers
         {
             if (ModelState.IsValid)
             {
+  
                 db.Adds.Add(add);
                 db.SaveChanges();
                 return RedirectToAction("Index");
