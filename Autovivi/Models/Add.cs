@@ -17,6 +17,12 @@ namespace Autovivi.Models
 
         public virtual List<Message> Messages { get; set; }
 
+<<<<<<< HEAD
         //public DateTime PostDate { get; set; }
+=======
+        public DateTime PostDate { get; set; }
+
+       
+>>>>>>> 39343b8df21a31b5e6e07f1c1d542d7c682fb9b8
     }
 }

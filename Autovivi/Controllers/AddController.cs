@@ -52,8 +52,27 @@ namespace Autovivi.Controllers
         {
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
   
                 db.Adds.Add(add);
+=======
+                if (Request.Files.Count > 0)
+                {
+
+                    foreach (string inputName in Request.Files)
+                    {
+                        HttpPostedFileBase file = Request.Files[inputName];
+                        if (file != null && file.ContentLength > 0)
+                        {
+                            var fileName = Path.GetFileName(file.FileName);
+                            var path = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                            file.SaveAs(path);
+                        }
+                    }
+                }
+                add.PostDate = DateTime.Now;
+                    db.Adds.Add(add);
+>>>>>>> 39343b8df21a31b5e6e07f1c1d542d7c682fb9b8
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -127,18 +146,39 @@ namespace Autovivi.Controllers
             base.Dispose(disposing);
         }
 
+        //[HttpPost]
+        //public ActionResult Upload(HttpPostedFileBase photo)
+        //{
+        //    string directory = @"E:\Temp\";
+
+        //    if (photo != null && photo.ContentLength > 0)
+        //    {
+        //        var fileName = Path.GetFileName(photo.FileName);
+        //        photo.SaveAs(Path.Combine(directory, fileName));
+        //    }
+
+        //    return RedirectToAction("Index");
+        //}
         [HttpPost]
-        public ActionResult Upload(HttpPostedFileBase photo)
+        public ActionResult Upload()
         {
-            string directory = @"E:\Temp\";
-
-            if (photo != null && photo.ContentLength > 0)
+            if (Request.Files.Count > 0)
             {
-                var fileName = Path.GetFileName(photo.FileName);
-                photo.SaveAs(Path.Combine(directory, fileName));
+           
+                    foreach (string inputName in Request.Files)
+                    {
+                        HttpPostedFileBase file = Request.Files[inputName];
+                        if (file != null && file.ContentLength > 0)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        var path = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                        file.SaveAs(path);
+                    }
+                }
             }
+            return null; 
 
-            return RedirectToAction("Index");
         }
     }
 }
+

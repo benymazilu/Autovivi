@@ -6,18 +6,26 @@
 
 <h2>Create Add</h2>
 
-@Html.Partial("_PartialVehicle", Model)
 
-@Html.Partial("_Upload")
+
 
 <br/>
 
 @Html.Partial("_PartialUser", Model)
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
+    @Html.Partial("_PartialVehicle", Model)
+
+    <input type="file" name="files0" id="files_0" />
+    <input type="file" name="files1" id="files_1" />
+    <input type="file" name="files2" id="files_2" />
+    <input type="file" name="files3" id="files_3" />
+    <input type="file" name="files4" id="files_4" />
+    <input type="file" name="files5" id="files_5" />
+    <input type="file" name="files6" id="files_6" />
+    <input type="file" name="files7" id="files_7" />
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
