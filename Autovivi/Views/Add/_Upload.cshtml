@@ -1,16 +1,17 @@
 ﻿
 
-<form action="documents/upload" method="post" enctype="multipart/form-data">
+@using (Html.BeginForm("Upload", "Add", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
    <h4><label for="photo">Photos</label></h4> 
     <hr/>
-    <input type="file" name="files[0]" id="files_0" />
-    <input type="file" name="files[1]" id="files_1" />
-    <input type="file" name="files[2]" id="files_2" />
-    <input type="file" name="files[3]" id="files_3" />
-    <input type="file" name="files[4]" id="files_4" />
-    <input type="file" name="files[5]" id="files_5" />
-    <input type="file" name="files[6]" id="files_6" />
-    <input type="file" name="files[7]" id="files_7" />
+    <input type="file" name="files0" id="files_0" />
+    <input type="file" name="files1" id="files_1" />
+    <input type="file" name="files2" id="files_2" />
+    <input type="file" name="files3" id="files_3" />
+    <input type="file" name="files4" id="files_4" />
+    <input type="file" name="files5" id="files_5" />
+    <input type="file" name="files6" id="files_6" />
+    <input type="file" name="files7" id="files_7" />
     <br/>
     <input type="submit" value="Upload" />
-</form>
+}
