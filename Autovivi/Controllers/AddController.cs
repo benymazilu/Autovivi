@@ -66,7 +66,7 @@ namespace Autovivi.Controllers
                         }
                     }
                 }
-
+                add.PostDate = DateTime.Now;
                     db.Adds.Add(add);
                 db.SaveChanges();
                 return RedirectToAction("Index");
