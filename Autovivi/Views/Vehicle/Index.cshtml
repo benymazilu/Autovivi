@@ -4,26 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-@*<h2>Index</h2>
-@Scripts.Render("~/bundles/jquery")
-<script>
-    $(function ()
-    {
-        $('#Brand').change(function ()
-        {        
-            $.getJSON('/Vehicle/ModelList/' + $('#Brand').text(), function (data)
-            {
-                var items = '<option>Da-i cu modelu</option>';
-                $.each(data, function (i, model)
-                {
-                    items += "<option value='" + model.Value + "'>" + model.Text + "</option>";
-                });
-                $('#Model').html(items);
-            });
-        });
-    });
-
-</script>*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

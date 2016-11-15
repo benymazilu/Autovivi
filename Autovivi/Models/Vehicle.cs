@@ -47,7 +47,7 @@ namespace Autovivi.Models
         public int Power { get; set; }
 
         public Options Options { get; set; }
-
+       
         public BodyStyle? BodyStyle { get; set; }
         
         public virtual List<BrandModel> Models { get; set; }

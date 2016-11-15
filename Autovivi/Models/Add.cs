@@ -13,16 +13,17 @@ namespace Autovivi.Models
 
         public virtual User User { get; set; }
 
+        public string CreatedByName { get; set; }
         public virtual Vehicle Vehicle { get; set; }
 
         public virtual List<Message> Messages { get; set; }
 
-<<<<<<< HEAD
-        //public DateTime PostDate { get; set; }
-=======
         public DateTime PostDate { get; set; }
-
-       
->>>>>>> 39343b8df21a31b5e6e07f1c1d542d7c682fb9b8
+        public string ImageName { get; set; }
+        public Add()
+        {
+            Vehicle = new Vehicle();
+            User = new User();
+        }
     }
 }

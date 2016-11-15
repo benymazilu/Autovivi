@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autovivi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,26 @@ namespace Autovivi.Controllers
 {
     public class HomeController : Controller
     {
+        private AutoviviDbContext db = new AutoviviDbContext();
+
         public ActionResult Index()
-        {
+        { 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Results(SearchOptions options)
+        {
+            var allVehiclesQuery = db.Adds.AsQueryable();
+            if (options.VehicleType != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.VehicleType == options.VehicleType);
+            if (options.Brand != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.Brand == options.Brand);
+            if (options.Price > 0) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.Price <= options.Price);
+            if (options.Mileage > 0) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.Mileage <= options.Mileage);
+            if (options.Model != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.Model == options.Model);
+            if (options.FuelType != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.FuelType == options.FuelType);
+            if (options.ProductionYear != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.ProductionYear == options.ProductionYear);
+            if (options.Condition != null) allVehiclesQuery = allVehiclesQuery.Where(a => a.Vehicle.Condition == options.Condition);
+            return View(allVehiclesQuery.ToList());
         }
 
         public ActionResult About()

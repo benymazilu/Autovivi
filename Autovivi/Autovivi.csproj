@@ -263,6 +263,7 @@
     <Compile Include="Models\Options.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\ProductionYear.cs" />
+    <Compile Include="Models\SearchOptions.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleType.cs" />
@@ -356,9 +357,11 @@
     <Content Include="Views\Home\_Vehicle.cshtml" />
     <Content Include="Views\Vehicle\DetailedSearch.cshtml" />
     <Content Include="Views\Add\_Upload.cshtml" />
+    <Content Include="Views\Home\Results.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

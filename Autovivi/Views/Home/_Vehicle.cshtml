@@ -1,4 +1,4 @@
-﻿@model Autovivi.Models.Vehicle
+﻿@model Autovivi.Models.SearchOptions
     @using Autovivi.Models
 
 
@@ -22,7 +22,7 @@
 
 </script>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Results","Home"))
 {
     @Html.AntiForgeryToken()
 
@@ -30,6 +30,15 @@
         <h4>Search Vehicles</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VehicleType,"Vehicle type", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.VehicleType, "Select Vehicle Type", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.VehicleType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -47,9 +56,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProductionYear,"Production Year", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ProductionYear, "1st Registration From", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.ProductionYear, "Select Production Year", new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.ProductionYear, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ProductionYear, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -57,17 +66,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FuelType,"Fuel Type", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @{var fuelList = Enum.GetValues(typeof(FuelType));}
-                @foreach (object radiotext in fuelList)
-                {
-                    @Html.RadioButton("radioname", radiotext.ToString())@radiotext.ToString() <span>  </span>
-                }
+                @Html.EnumDropDownListFor(model => model.FuelType,"Select Fuel Type", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FuelType, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Price,"Price Up To", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
@@ -75,11 +80,20 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Mileage, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Mileage,"Mileage Up To", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Mileage, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Mileage, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Condition, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.Condition, "Select Condition", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Condition, "", new { @class = "text-danger" })
+            </div>
+        </div>
+              <input type="submit" value="Search" class="index-search-btn" />
         </div>
 }

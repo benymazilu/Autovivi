@@ -1,4 +1,5 @@
 ﻿@model Autovivi.Models.Add
+@using Autovivi.Models
 
 @{
     ViewBag.Title = "Details";
@@ -10,7 +11,144 @@
     <h4>Add</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.ProductionYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.ProductionYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.FuelType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.FuelType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.VehicleType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.VehicleType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Mileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Mileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.CubicCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.CubicCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Condition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Condition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Damage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Damage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.CountryOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.CountryOrigin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Colour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Colour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.GearBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.GearBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Power)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Power)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.Options)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.Options)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.BodyStyle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.BodyStyle)
+        </dd>
+        
     </dl>
+    <img src="~/uploads/@Model.ImageName" />
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |

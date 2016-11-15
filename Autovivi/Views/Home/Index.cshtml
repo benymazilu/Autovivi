@@ -1,16 +1,17 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
 <div class="index-box">
     <div>
         @Html.Partial("_Vehicle")
     </div>
 
     <div>
-        @using (Html.BeginForm("DetailedSearch", "Vehicle"))
-        {
-            <button class="detailed-btn" type="submit">Detailed Search</button> 
-        }
-        <span> <input type="submit" value="Search" class="index-search-btn" /> </span>
+        <div class="detailed-btn">
+            @Html.ActionLink("Detailed Search", "DetailedSearch", "Vehicle")
+        </div>
+
+  
     </div>
 </div>

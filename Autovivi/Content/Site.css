@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #5D5D81;
+    background-color: #FBF9FF;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -35,9 +35,7 @@ textarea {
 }
 
 #ck-button:hover {
-    background:#5D5D81;
-    border-color:white;
-    color:white;
+    background:#FBF9FF;
 }
 
 #ck-button:active {
@@ -62,10 +60,11 @@ textarea {
 }
 
 .index-box {
-    background-color: #F0F2EF;
-    margin:50px 500px 50px 0px;
+    background-color: #FBF9FF;
+    margin:50px 350px 50px 0px;
     padding: 20px 20px 50px 20px;
     border-radius: 0 0 10px 0;
+    border:1px solid #81171B ;
 }
 
 .index-search-btn {
@@ -98,10 +97,6 @@ textarea {
 
 .nav:hover {
      font-size: larger;
-     background-color: #5D5D81;
+     background-color: #000807;
  }
 
-.footer-text {
-    color: white;
-    font-size:15px;
-}
