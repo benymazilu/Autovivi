@@ -13,7 +13,7 @@ namespace Autovivi.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611101932396_init"; }
+            get { return "201611161500119_init"; }
         }
         
         string IMigrationMetadata.Source
