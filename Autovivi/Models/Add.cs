@@ -19,7 +19,9 @@ namespace Autovivi.Models
         public virtual List<Message> Messages { get; set; }
 
         public DateTime PostDate { get; set; }
+
         public string ImageName { get; set; }
+
         public Add()
         {
             Vehicle = new Vehicle();

@@ -4,13 +4,13 @@
     ViewBag.Title = "View";
 }
 
-<h2>View</h2>
+<h2>Results</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Brand)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.PostDate)
         </th>
@@ -20,14 +20,15 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.PostDate)
+            @Html.ActionLink("Vehicle", "Details", new { id = item.Id })
         </td>
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.DisplayFor(modelItem => item.PostDate)
         </td>
     </tr>
 }
 
 </table>
+
+@Html.ActionLink("Back", "Index","Home")

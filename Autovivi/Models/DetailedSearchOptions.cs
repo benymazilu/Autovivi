@@ -6,11 +6,8 @@ using System.Web;
 
 namespace Autovivi.Models
 {
-    public class Vehicle
+    public class DetailedSearchOptions
     {
-        [Key]
-        public int Id { get; set; }
-
         public Brand? Brand { get; set; }
 
         public string Model { get; set; }
@@ -35,22 +32,19 @@ namespace Autovivi.Models
 
         public string Damage { get; set; }
 
-        [DataType(DataType.MultilineText)]
-        public string Description { get; set; }
-
         public string CountryOrigin { get; set; }
 
         public string Colour { get; set; }
 
         public Gearbox? GearBox { get; set; }
 
-        [Range(typeof(int),"0","1000000")]
+        [Range(typeof(int), "0", "1000000")]
         public int Power { get; set; }
 
         public Options Options { get; set; }
-       
+
         public BodyStyle? BodyStyle { get; set; }
-        
+
         public virtual List<BrandModel> Models { get; set; }
     }
 }

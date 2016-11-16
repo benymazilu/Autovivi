@@ -100,3 +100,8 @@ textarea {
      background-color: #000807;
  }
 
+.image1 {
+    border:1px solid black;
+    width: 60%;
+    height: 60%;
+}

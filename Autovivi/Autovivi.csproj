@@ -255,6 +255,7 @@
     <Compile Include="Models\BrandModelEnums\AlfaRomeo.cs" />
     <Compile Include="Models\BrandModelEnums\Audi.cs" />
     <Compile Include="Models\Condition.cs" />
+    <Compile Include="Models\DetailedSearchOptions.cs" />
     <Compile Include="Models\FuelType.cs" />
     <Compile Include="Models\Gearbox.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -358,6 +359,8 @@
     <Content Include="Views\Vehicle\DetailedSearch.cshtml" />
     <Content Include="Views\Add\_Upload.cshtml" />
     <Content Include="Views\Home\Results.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\DetailedResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

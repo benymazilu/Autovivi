@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Autovivi.Models.Add>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>Detailed Results</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Vehicle", "Details", new { id = item.Id })
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PostDate)
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Back To Detailed Search", "DetailedSearch", "Vehicle")
